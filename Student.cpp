@@ -3,6 +3,20 @@
 
 using namespace std;
 
+Student::Student(string n, string m, int a)
+{
+	name = n;
+	major = m;
+	age = a;
+}
+
+Student::Student(string n, int a)
+{
+	name = n;
+	major = "undecided";
+	age = a;
+}
+
 void Student::setName(string n)
 {
 	name = n;
@@ -25,6 +39,9 @@ string Student::getMajor()
 
 void Student::setAge(int a)
 {
+	if (a < 14 || a > 120)
+		cout << "Invalid age." << endl;
+	else
 	age = a;
 }
 

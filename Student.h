@@ -10,11 +10,16 @@ private:
 	int age;
 
 public:
+	Student(string, string, int);
+	Student(string, int);
+
 	void setName(string);
 	string getName();
 	void setMajor(string);
 	string getMajor();
 	void setAge(int);
 	int getAge();
+
+	
 	void displayInfo();
 };
