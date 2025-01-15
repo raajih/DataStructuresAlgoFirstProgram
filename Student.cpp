@@ -3,54 +3,56 @@
 
 using namespace std;
 
-Student::Student(string n, string m, int a)
+template<class ItemType>
+ Student<ItemType>::Student(string n, string m, int a, ItemType fav)
 {
 	name = n;
 	major = m;
 	age = a;
+	favoriteThing = fav;
 }
 
-Student::Student(string n, int a)
+template<class ItemType>
+Student<ItemType>::Student(string n, int a)
 {
 	name = n;
 	major = "undecided";
 	age = a;
 }
 
-void Student::setName(string n)
+template<class ItemType>
+void Student<ItemType>::setName(string n)
 {
 	name = n;
 }
 
-string Student::getName()
+template<class ItemType>
+string Student<ItemType>::getName()
 {
 	return name;
 }
 
-void Student::setMajor(string m)
+template<class ItemType>
+void Student<ItemType>::setMajor(string m)
 {
 	major = m;
 }
 
-string Student::getMajor()
+template<class ItemType>
+string Student<ItemType>::getMajor()
 {
 	return major;
 }
 
-void Student::setAge(int a)
-{
-	if (a < 14 || a > 120)
-		cout << "Invalid age." << endl;
-	else
-	age = a;
-}
 
-int Student::getAge()
+template<class ItemType>
+int Student<ItemType>::getAge()
 {
 	return age;
 }
 
-void Student::displayInfo()
+template<class ItemType>
+void Student<ItemType>::displayInfo()
 {
 	cout << "Student " << name << " is a " << major << " major." << endl;
 }

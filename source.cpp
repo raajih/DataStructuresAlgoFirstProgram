@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-	Student s1("Josh", "Math", 25);
-	Student s2("Raajih", "CS", 24);
+	Student<string> s1("Josh", "Math", 25, "kittens");
+	Student<bool> s2("Raajih", "CS", 24, true);
 
 
 	s1.displayInfo();
