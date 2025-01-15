@@ -9,15 +9,15 @@ int main()
 	Student s[25];
 
 	Student s1;
-	s[0].name = "Josh";
-	s[0].major = "Math";
-	s[1].name = "Raajih";
-	s[1].major = "CS";
-	s[1].age = -84;
+	s[0].setName("Josh");
+	s[0].setMajor("Math");
+	s[1].setName("Raajih");
+	s[1].setMajor("CS");
+	s[1].setAge(-84);
 
 	for (Student x : s)
 	{
-		if (!(x.name.empty()))
+		if (!(x.getName().empty()))
 		{
 			x.displayInfo();
 		}
